@@ -14,6 +14,11 @@ import axios from 'axios';
 // so we never end up with double-slashes or /api/api in the URL.
 const rawUrl = (import.meta.env.VITE_API_URL || '').replace(/\/api\/?$/, '').replace(/\/$/, '');
 
+// In production, VITE_API_URL must be set — warn loudly if missing
+if (import.meta.env.PROD && !rawUrl) {
+  console.error('❌ VITE_API_URL is not set. API calls will fail in production.');
+}
+
 const BASE = rawUrl ? `${rawUrl}/api` : '/api';
 
 const api = axios.create({

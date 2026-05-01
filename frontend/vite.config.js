@@ -8,7 +8,7 @@ export default defineConfig({
     // Dev-only proxy — routes /api calls to local backend
     proxy: {
       '/api': {
-        target: process.env.VITE_API_URL || 'http://localhost:5000',
+        target: process.env.VITE_API_URL || 'https://ethara-ai-project-production.up.railway.app',
         changeOrigin: true,
       },
     },

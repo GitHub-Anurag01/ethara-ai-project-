@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 
 // CORS configuration
-// Accepts multiple origins: local dev + production Railway URL
+// Accepts multiple origins: local dev + production Railway URLs
 const allowedOrigins = [
   'http://localhost:3000',
   'https://affectionate-gentleness-production-5ca1.up.railway.app',

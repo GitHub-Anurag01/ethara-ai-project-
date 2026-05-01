@@ -22,6 +22,7 @@ app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 // Accepts multiple origins: local dev + production Railway URL
 const allowedOrigins = [
   'http://localhost:3000',
+  'https://affectionate-gentleness-production-5ca1.up.railway.app',
   process.env.CLIENT_URL,
 ].filter(Boolean);
 

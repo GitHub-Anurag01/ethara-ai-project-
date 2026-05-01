@@ -11,7 +11,7 @@ Each service must point to its own subfolder as the **Root Directory**.
 git init
 git add .
 git commit -m "initial commit"
-git remote add origin https://github.com/YOUR_USERNAME/team-task-manager.git
+git remote add origin https://github.com/GitHub-Anurag01/Task-manager-for-ethara-ai-.git
 git push -u origin main
 ```
 

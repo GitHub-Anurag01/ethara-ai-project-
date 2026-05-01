@@ -19,10 +19,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 
 // CORS configuration
-// Accepts multiple origins: local dev + production Render URL
+// Accepts multiple origins: local dev + production Railway URL
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://task-manager-for-ethara-ai-1.onrender.com',
   process.env.CLIENT_URL,
 ].filter(Boolean);
 
